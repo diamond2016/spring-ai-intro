@@ -1,6 +1,6 @@
 HELP.md
 target/
-!.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
@@ -29,6 +29,14 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
+### OPEN AI ###
+/.openai/
+
 ### VS Code ###
 .vscode/
-.env
+
+### Project specific ###
+~/.env
+~/.env.local/
+HELP.md
+TASKS.md
