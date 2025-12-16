@@ -13,4 +13,4 @@ This is the link to the course: [Spring AI - Beginner to Guru](https://www.udemy
 
 # Work
 
-16.12.2025, get API key fromn OpeAI, first request - response prompt from the LLM,  by Spring AI services.
+16.12.2025, get API key fromn OpenAI, first request - response prompt from the LLM,  by Spring AI services.
