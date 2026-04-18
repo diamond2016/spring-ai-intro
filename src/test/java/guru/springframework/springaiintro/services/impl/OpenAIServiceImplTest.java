@@ -12,7 +12,7 @@ public class OpenAIServiceImplTest {
 
     @Test
     void testGetAnswer() {
-        String answer = openAIServiceImpl.getAnswer("What can you do?");
+        String answer = openAIServiceImpl.getAnswer("Pls give an introduction of the LLM model responding?");
         System.out.println(answer);
     }
 }
