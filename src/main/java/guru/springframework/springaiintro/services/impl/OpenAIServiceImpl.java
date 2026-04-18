@@ -32,13 +32,13 @@ public class OpenAIServiceImpl implements OpenAIService {
 
 
     @Override
-    public Answer getAnswer(String question) {
+    public String getAnswer(String question) {
         PromptTemplate promptTemplate = new PromptTemplate(new Question(question).question());
         Prompt prompt = promptTemplate.create();
         ChatResponse chatResponse = chatModel.call(prompt);
   
         String response = chatResponse.getResult().getOutput().getText();
-        return new Answer(response);
+        return response;
     }
 
 }
