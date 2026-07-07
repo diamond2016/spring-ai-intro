@@ -25,7 +25,7 @@ public class OpenAIServiceImpl implements OpenAIService {
         PromptTemplate promptTemplate = new PromptTemplate(question.question());
         Prompt prompt = promptTemplate.create();
         ChatResponse chatResponse = chatModel.call(prompt);
-  
+        System.out.println("called with " + question.toString());
         String response = chatResponse.getResult().getOutput().getText();
         return new Answer(response);
     }
