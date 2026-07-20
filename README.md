@@ -5,3 +5,7 @@ This is the link to the course: [Spring AI - Beginner to Guru](https://www.udemy
 
 Calendar
 17.04.2026 adapted the code to the api of a provider openai compatible 
+
+20.07.2026 Addedd test for prompt "capital of a country", tested with postman, addedd test collection 
+
+> this test was made with **gemma-4-12b" as local llm

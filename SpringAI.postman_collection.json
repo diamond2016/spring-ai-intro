@@ -1,0 +1,132 @@
+{
+  "info": {
+    "_postman_id": "123cea96-96a4-414a-a2ab-598a60f0c2c1",
+    "name": "SpringAI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50789286"
+  },
+  "item": [
+    {
+      "name": "getAnswer",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"question\": \"Give the name and date of invention of who invented television\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/ask",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "ask"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Request (television)",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"question\": \"Give the name and date of invention of who invented television\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/ask",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "ask"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 18 Apr 2026 16:02:47 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"answer\": \"<think>\\nOkay, so the user is asking who invented television and when. Let me start by recalling what I know. I think John Logie Baird is a name associated with early television. But I'm not sure if he was the sole inventor or if there were others involved. I remember that there were multiple inventors contributing to the development of television.\\n\\nFirst, I should consider the different types of television systems. There's mechanical television and electronic television. I believe Baird worked on the mechanical version. He demonstrated something in the 1920s. Maybe 1926? I think he gave a demonstration in London. But then there's also the electronic television, which uses cathode ray tubes. Philo Farnsworth and Vladimir Zworykin are names that come to mind here. Farnsworth is often credited with the first all-electronic television system. When did that happen? Maybe around 1927?\\n\\nWait, there's a bit of overlap here. So, Baird's mechanical system was one approach, and then the electronic systems came later. The question is about the invention of television in general. But television as a technology evolved over time with contributions from multiple people. So, the answer might need to mention both Baird and Farnsworth, maybe Zworykin as well.\\n\\nI should check the dates. Baird's first public demonstration was in 1926. Farnsworth transmitted the first electronic television image in 1927. Then Zworykin also worked on electronic systems. The question is about who invented it. But in reality, it's a combination of inventors. However, if the user is looking for the primary inventors, maybe highlighting Baird for mechanical and Farnsworth for electronic. Also, there's the aspect of color television. Maybe that's another layer, but the user might just want the basics.\\n\\nAnother point: sometimes people credit Marconi or others for radio, but television is a different technology. Also, the question is phrased as \\\"Who invented television\\\" and \\\"date of invention.\\\" But since it's a complex invention, the answer would need to mention multiple contributors and their respective dates.\\n\\nI need to structure the answer to clarify that television was developed by multiple inventors over time. Start with the mechanical television by Baird in the 1920s, then move to the electronic systems by Farnsworth and Zworykin in the late 1920s and 1930s. Also, note that the concept of television was something that many people contributed to, so it's not a single person's invention. Maybe mention that the first public demonstrations happened in 1926 (Baird) and 1927 (Farnsworth), and then the systems became more standardized in the 1930s with the BBC and others.\\n\\nAlso, I should check if there are any other inventors. For example, Paul Nipkow's Nipkow disk in the 1880s was an early concept for scanning images, which is part of the mechanical television. So, maybe he's part of the foundational work. But the actual working system would be Baird's demonstration. So, the answer should mention Nipkow as a precursor, then Baird for mechanical TV, and Farnsworth for electronic.\\n\\nWait, the user might not need the very early concepts, just the main inventors and dates. Also, sometimes in popular culture, Baird is the one most associated with early TV. So, the answer might need to balance between the mechanical and electronic approaches and their respective inventors and dates.\\n\\nTo sum up, the key points are:\\n\\n- Mechanical television: John Logie Baird, demonstrated in 1926.\\n\\n- Electronic television: Philo Farnsworth, first transmitted an image in 1927; Vladimir Zworykin also worked on electronic systems.\\n\\nTherefore, the invention of television is attributed to multiple inventors. The mechanical system was pioneered by Baird in the 1920s, while the electronic system was developed by Farnsworth and others in the late 1920s. The answer should clarify that it's a collaborative effort with different contributors at different times.\\n</think>\\n\\nThe invention of television is a complex process involving multiple inventors and technological advancements over time. Here's a structured overview:\\n\\n### **Mechanical Television**\\n- **Inventor**: John Logie Baird  \\n- **Date**: **1926**  \\n- **Contribution**: Baird demonstrated the first working mechanical television system in London. His system used a Nipkow disk (a precursor concept by Paul Nipkow in 1884) to scan and project images. This marked the first public demonstration of real-time moving images transmitted electronically.\\n\\n### **Electronic Television**\\n- **Inventor**: Philo Farnsworth  \\n- **Date**: **1927**  \\n- **Contribution**: Farnsworth, an American inventor, transmitted the first fully electronic television image (a simple straight line) using an all-electronic system. His innovation replaced mechanical components with cathode-ray tubes (CRTs), laying the foundation for modern TV.\\n\\n- **Inventor**: Vladimir Zworykin  \\n- **Contribution**: A Russian-American engineer, Zworykin developed the iconoscope (an early camera tube) in 1923 and later the kinescope (CRT display) in the 1930s. His work was critical in advancing electronic television systems.\\n\\n---\\n\\n### **Key Milestones**\\n- **1884**: Paul Nipkow patented the Nipkow disk, a mechanical scanning device for images.  \\n- **1926**: John Logie Baird’s mechanical TV demonstration.  \\n- **1927**: Philo Farnsworth’s electronic TV transmission.  \\n- **1930s**: Commercialization of television by the BBC (using Baird’s mechanical system) and adoption of electronic systems (Farnsworth/Zworykin) as the standard.\\n\\n---\\n\\n### **Conclusion**\\nTelevision was not invented by a single person but evolved through the contributions of multiple inventors:\\n- **John Logie Baird** (mechanical TV, 1926)  \\n- **Philo Farnsworth** (electronic TV, 1927)  \\n- **Vladimir Zworykin** (critical electronic components, 1930s)  \\n\\nEach played a pivotal role in different stages of television’s development. The transition from mechanical to electronic systems marked the foundation of modern television.\"\n}"
+        },
+        {
+          "name": "soccer",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"question\": \"Give the name and date of invention of who invented television\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/ask",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "ask"
+              ]
+            }
+          },
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "body": null
+        }
+      ]
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
