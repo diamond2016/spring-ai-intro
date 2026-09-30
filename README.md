@@ -8,4 +8,4 @@ Calendar
 
 20.07.2026 Addedd test for prompt "capital of a country", tested with postman, addedd test collection 
 
-> this test was made with **gemma-4-12b" as local llm
+30.09.2026 Restart development. passing to local LLM with OpenAi interface: Qwen3.8-27b
