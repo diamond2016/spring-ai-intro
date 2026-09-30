@@ -3,6 +3,7 @@ package guru.springframework.springaiintro.services.impl;
 import java.util.Map;
 import java.util.Objects;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.ai.chat.model.ChatModel;
 import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.Prompt;
@@ -23,6 +24,7 @@ import guru.springframework.springaiintro.model.GetCapitalResponse;
 import guru.springframework.springaiintro.model.Question;
 import guru.springframework.springaiintro.services.OpenAIService;
 
+@Slf4j
 @Service
 public class OpenAIServiceImpl implements OpenAIService {
 
@@ -61,7 +63,7 @@ public class OpenAIServiceImpl implements OpenAIService {
         // PromptTemplate promptTemplate = new PromptTemplate("What is the capital of " + capitalRequest.stateOrCountry() + "?");
         BeanOutputConverter<GetCapitalResponse> beanOutputConverter = new BeanOutputConverter<>(GetCapitalResponse.class);
         String format = beanOutputConverter.getFormat();
-        System.out.println(format);
+        log.info("Format of prompt {}", format);
         
         PromptTemplate promptTemplate = new PromptTemplate(getCapitalPrompt);
         Prompt prompt = promptTemplate.create(Map.of("stateOrCountry", capitalRequest.stateOrCountry(), "format", format));
