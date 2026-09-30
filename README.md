@@ -10,3 +10,4 @@ Calendar
 
 30.09.2026 Restart development. passing to local LLM with OpenAi interface: Qwen3.8-27b 
 New /capitalWithInfo using custom templates for output, /capital in JSon format instead, using OpenAi model bean converter.
+Project refactor (pom) for Spring Boot 4.0.1

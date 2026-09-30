@@ -9,14 +9,9 @@ import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.ai.converter.BeanOutputConverter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 import guru.springframework.springaiintro.model.Answer;
 import guru.springframework.springaiintro.model.GetCapitalRequest;
@@ -29,10 +24,7 @@ import guru.springframework.springaiintro.services.OpenAIService;
 public class OpenAIServiceImpl implements OpenAIService {
 
     private final ChatModel chatModel;
-    
-    @Autowired 
-    ObjectMapper objectMapper;
-    
+
     public OpenAIServiceImpl(ChatModel chatModel) {
         this.chatModel = chatModel;
     }
