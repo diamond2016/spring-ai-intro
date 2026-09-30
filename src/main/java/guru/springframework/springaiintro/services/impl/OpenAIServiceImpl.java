@@ -1,11 +1,13 @@
 package guru.springframework.springaiintro.services.impl;
 
 import java.util.Map;
+import java.util.Objects;
 
 import org.springframework.ai.chat.model.ChatModel;
 import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.chat.prompt.PromptTemplate;
+import org.springframework.ai.converter.BeanOutputConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
@@ -17,6 +19,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import guru.springframework.springaiintro.model.Answer;
 import guru.springframework.springaiintro.model.GetCapitalRequest;
+import guru.springframework.springaiintro.model.GetCapitalResponse;
 import guru.springframework.springaiintro.model.Question;
 import guru.springframework.springaiintro.services.OpenAIService;
 
@@ -52,14 +55,19 @@ public class OpenAIServiceImpl implements OpenAIService {
         return ans.answer();
     }
 
+
     @Override
-    public Answer getCapital(GetCapitalRequest capitalRequest) {
+    public GetCapitalResponse getCapital(GetCapitalRequest capitalRequest) {
         // PromptTemplate promptTemplate = new PromptTemplate("What is the capital of " + capitalRequest.stateOrCountry() + "?");
+        BeanOutputConverter<GetCapitalResponse> beanOutputConverter = new BeanOutputConverter<>(GetCapitalResponse.class);
+        String format = beanOutputConverter.getFormat();
+        System.out.println(format);
         
         PromptTemplate promptTemplate = new PromptTemplate(getCapitalPrompt);
-        Prompt prompt = promptTemplate.create(Map.of("stateOrCountry", capitalRequest.stateOrCountry()));
+        Prompt prompt = promptTemplate.create(Map.of("stateOrCountry", capitalRequest.stateOrCountry(), "format", format));
         ChatResponse chatResponse = chatModel.call(prompt);
         String response = chatResponse.getResult().getOutput().getText();
+        /*
         String responseString;
 
         try {
@@ -68,9 +76,10 @@ public class OpenAIServiceImpl implements OpenAIService {
         } catch (JsonProcessingException e) {
             throw new RuntimeException( "Error in reading JSON response " + e.getMessage());
         }
-        
-        return new Answer(responseString);
+        */
+        return beanOutputConverter.convert(Objects.requireNonNull(response));
     }
+
 
     @Override 
     public Answer getCapitalWithInfo(GetCapitalRequest capitalRequest) {
