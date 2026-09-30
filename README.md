@@ -8,4 +8,5 @@ Calendar
 
 20.07.2026 Addedd test for prompt "capital of a country", tested with postman, addedd test collection 
 
-30.09.2026 Restart development. passing to local LLM with OpenAi interface: Qwen3.8-27b
+30.09.2026 Restart development. passing to local LLM with OpenAi interface: Qwen3.8-27b 
+New /capitalWithInfo using custom templates for output.
