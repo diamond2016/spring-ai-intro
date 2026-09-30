@@ -1,1 +1,1 @@
-What is the capital of {stateOrCountry} ?
+What is the capital of {stateOrCountry} ? Respond in JSON without markdown, with property "answer" and your response as value.
